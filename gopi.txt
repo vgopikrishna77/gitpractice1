@@ -1,0 +1,22 @@
+SQL STatements order of execution
+FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY
+Oracle evaluates the FROM clause first, then the INNER JOIN clause, and finally the SELECT clause.
+Second, the INNER JOIN merges the matching rows from both tables in an intermediate table if they are equal.
+
+FROM
+WHERE
+GROUP BY
+HAVING
+SELECT
+DISTINCT
+ORDER BY
+ALTER TABLE table_name
+RENAME COLUMN column_name TO new_name;
+Code language: SQL (Structured Query Language) (sql)
+For example:
+ALTER TABLE persons
+DROP COLUMN birthdate;
+
+ SET LINESIZE 200
+SQL> COLUMN name FORMAT A15
+SQL> COLUMN age FORMAT 999
