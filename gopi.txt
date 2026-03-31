@@ -5,7 +5,7 @@ Second, the INNER JOIN merges the matching rows from both tables in an intermedi
 
 FROM
 WHERE
-GROUP BY
+GROUP BY having
 HAVING
 SELECT
 DISTINCT
@@ -20,3 +20,20 @@ DROP COLUMN birthdate;
  SET LINESIZE 200
 SQL> COLUMN name FORMAT A15
 SQL> COLUMN age FORMAT 999
+
+🔹 Save SQL to a File (Script)
+
+Use SPOOL command.
+
+Start saving output to file
+SPOOL mycode.sql
+
+
+Now write your SQL:
+
+CREATE TABLE test(id NUMBER);
+INSERT INTO test VALUES (1);
+SELECT * FROM test;
+
+Stop saving
+SPOOL OFF
